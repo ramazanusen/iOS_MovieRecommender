@@ -1,0 +1,11 @@
+# macOS-specific files
+.DS_Store
+
+# Xcode-specific files
+*.xcworkspace
+xcuserdata/
+DerivedData/
+build/
+
+# Sensitive configuration
+Config.plist
