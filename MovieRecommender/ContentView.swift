@@ -15,6 +15,11 @@ struct ContentView: View {
                     Label("Movies", systemImage: "film")
                 }
 
+            GenreListView()
+                .tabItem {
+                    Label("Genres", systemImage: "list.bullet")
+                }
+
             BookmarksView()
                 .tabItem {
                     Label("Bookmarks", systemImage: "bookmark")

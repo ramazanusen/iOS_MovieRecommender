@@ -103,6 +103,92 @@ class NetworkManager {
         }
         task.resume()
     }
+    
+    func fetchTrendingMovies(completion: @escaping (Result<[Movie], Error>) -> Void) {
+        let urlString = "\(baseURL)/trending/all/day?api_key=\(apiKey)"
+        guard let url = URL(string: urlString) else {
+            completion(.failure(NetworkError.invalidURL))
+            return
+        }
+
+        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+            if let error = error {
+                completion(.failure(error))
+                return
+            }
+
+            guard let data = data else {
+                completion(.failure(NetworkError.noData))
+                return
+            }
+
+            do {
+                let decodedResponse = try JSONDecoder().decode(MovieResponse.self, from: data)
+                completion(.success(decodedResponse.results))
+            } catch {
+                completion(.failure(error))
+            }
+        }
+        task.resume()
+    }
+    
+    // Fetch all genres
+    func fetchGenres(completion: @escaping (Result<[Genre], Error>) -> Void) {
+        let urlString = "\(baseURL)/genre/movie/list?api_key=\(apiKey)&language=en-US"
+        guard let url = URL(string: urlString) else {
+            completion(.failure(NetworkError.invalidURL))
+            return
+        }
+
+        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+            if let error = error {
+                completion(.failure(error))
+                return
+            }
+
+            guard let data = data else {
+                completion(.failure(NetworkError.noData))
+                return
+            }
+
+            do {
+                let decodedResponse = try JSONDecoder().decode(GenreResponse.self, from: data)
+                completion(.success(decodedResponse.genres))
+            } catch {
+                completion(.failure(error))
+            }
+        }
+        task.resume()
+    }
+
+    // Fetch movies by genre
+    func fetchMoviesByGenre(genreID: Int, completion: @escaping (Result<[Movie], Error>) -> Void) {
+        let urlString = "\(baseURL)/discover/movie?api_key=\(apiKey)&language=en-US&with_genres=\(genreID)"
+        guard let url = URL(string: urlString) else {
+            completion(.failure(NetworkError.invalidURL))
+            return
+        }
+
+        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+            if let error = error {
+                completion(.failure(error))
+                return
+            }
+
+            guard let data = data else {
+                completion(.failure(NetworkError.noData))
+                return
+            }
+
+            do {
+                let decodedResponse = try JSONDecoder().decode(MovieResponse.self, from: data)
+                completion(.success(decodedResponse.results))
+            } catch {
+                completion(.failure(error))
+            }
+        }
+        task.resume()
+    }
 }
 
 
