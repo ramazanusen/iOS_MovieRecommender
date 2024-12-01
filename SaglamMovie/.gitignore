@@ -33,5 +33,5 @@ fastlane/test_output
 
 # Config files containing sensitive data
 Config.plist
+SaglamMovie/Configuration/Config.plist
 
-SaglamMovie/Configuration
