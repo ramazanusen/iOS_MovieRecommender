@@ -35,3 +35,7 @@ fastlane/test_output
 Config.plist
 SaglamMovie/Configuration/Config.plist
 
+SaglamMovie.xcodeproj
+
+SaglamMovieTests
+SaglamMovieUITests
