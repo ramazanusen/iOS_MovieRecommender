@@ -68,3 +68,5 @@ GoogleService-Info.plist
 # Other
 *.log
 .swiftpm
+
+SaglamMovie/Configuration
