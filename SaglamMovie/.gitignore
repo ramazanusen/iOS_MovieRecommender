@@ -1,41 +1,70 @@
 # Xcode
 .DS_Store
+*/build/*
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
 xcuserdata/
-*.xcuserstate
-project.xcworkspace/
+*.xccheckout
+*.moved-aside
 DerivedData/
+.idea/
+*.hmap
+*.ipa
+*.xcuserstate
+*.xcworkspace/
+!default.xcworkspace
+
+# Obj-C/Swift specific
 *.hmap
 *.ipa
 *.dSYM.zip
 *.dSYM
 
-# Swift Package Manager
-.build/
-Packages/
-Package.pins
-Package.resolved
-
 # CocoaPods
 Pods/
 *.xcworkspace
 
-# Fastlane
+# Carthage
+Carthage/Build/
+
+# fastlane
 fastlane/report.xml
 fastlane/Preview.html
-fastlane/screenshots
+fastlane/screenshots/**/*.png
 fastlane/test_output
 
-# Code Coverage
-*.xcresult/
+# Code Injection
+iOSInjectionProject/
 
 # Environment variables
 .env
+.env.*
 
-# Config files containing sensitive data
-Config.plist
-SaglamMovie/Configuration/Config.plist
+# API Keys and Secrets
+**/Config.plist
+**/Secrets.plist
+**/GoogleService-Info.plist
+**/APIKeys.swift
+**/APIConstants.swift
+**/Credentials.swift
 
-SaglamMovie.xcodeproj
+# Firebase
+GoogleService-Info.plist
 
-SaglamMovieTests
-SaglamMovieUITests
+# Certificates
+*.cer
+*.certSigningRequest
+*.p12
+*.mobileprovision
+*.provisionprofile
+*.key
+
+# Other
+*.log
+.swiftpm
