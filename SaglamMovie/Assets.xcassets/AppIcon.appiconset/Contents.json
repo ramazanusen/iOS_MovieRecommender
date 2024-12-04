@@ -1,0 +1,38 @@
+{
+  "images" : [
+    {
+      "filename" : "DALL·E 2024-12-03 17.47.55 - A youthful and modern minimalist iOS app icon for a movie recommendation application. The design features a playful and colorful representation of a f.png",
+      "idiom" : "universal",
+      "platform" : "ios",
+      "size" : "1024x1024"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "DALL·E 2024-12-03 17.47.55 - A youthful and modern minimalist iOS app icon for a movie recommendation application. The design features a playful and colorful representation of a f 1.png",
+      "idiom" : "universal",
+      "platform" : "ios",
+      "size" : "1024x1024"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "tinted"
+        }
+      ],
+      "filename" : "DALL·E 2024-12-03 17.47.55 - A youthful and modern minimalist iOS app icon for a movie recommendation application. The design features a playful and colorful representation of a f 2.png",
+      "idiom" : "universal",
+      "platform" : "ios",
+      "size" : "1024x1024"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
