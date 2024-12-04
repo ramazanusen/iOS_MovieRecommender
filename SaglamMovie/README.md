@@ -1,6 +1,6 @@
 # Movie Recommender iOS App
 
-A sophisticated iOS application built with SwiftUI that helps users discover movies, manage watchlists, and find streaming availability using the TMDB API.
+A sophisticated iOS application built with SwiftUI that helps users discover movies, create custom lists, and find streaming availability using the TMDB API.
 
 ## Features
 
